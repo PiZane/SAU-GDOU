@@ -20,15 +20,7 @@ function footerPosition(){
 				$("#colophon").addClass("fixed-bottom");
 		}
 }
-function aside(){
-	var contentWidth = document.body.scrollWidth;
-	if (contentWidth < 992) {
-		$('#secondary').simpleScrollFollow('setEnabled', false);
-	} else {
-		$('#secondary').simpleScrollFollow('setEnabled', true);
-	}
-}
-$(document).ready(function() {
+var x = function () {
 	$.material.init();
 	slContent();
 	$('.slider').unslider({
@@ -46,8 +38,16 @@ $(document).ready(function() {
 	$('#video-tab').click();
 	$(function(){
 	    footerPosition();
-			aside();
 	    $(window).resize(footerPosition);
+			function aside(){
+				var contentWidth = document.body.scrollWidth;
+				if (contentWidth < 992) {
+					$('#secondary').simpleScrollFollow('setEnabled', false);
+				} else {
+					$('#secondary').simpleScrollFollow('setEnabled', true);
+				}
+			}
+			aside();
 	    $(window).resize(aside);
 			$(window).scroll(function () {
 				var position = $('#secondary').css('position');
@@ -58,4 +58,5 @@ $(document).ready(function() {
 				}
 			});
 	});
-});
+};
+window.onload = setTimeout(x, 200);
