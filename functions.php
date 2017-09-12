@@ -181,7 +181,7 @@ function get_unslider_thumbnail( $id ) {
 	   	$output = wp_get_attachment_image_src( $post_thumbnail_id, 'full' );
 	   	$first_img = $output[0];
 	} else {
-			$first_img =  home_url('/') . 'assets/img/' . $id % 4 . '.png';
+			$first_img =  get_template_directory_uri() . '/assets/img/' . $id % 4 . '.png';
 	}
 	return $first_img;
 }
@@ -203,7 +203,7 @@ if ( $post_thumbnail_id ) {
 
     if(empty($first_img)){ // 既没有缩略图，文中也没有图，设置一幅默认的图片
         //return get_template_directory_uri() . '/img/' . 0  .'.png';
-        return home_url('/') . 'assets/img/default.png';
+        return get_template_directory_uri() . '/assets/img/default.png';
     }
 }
 

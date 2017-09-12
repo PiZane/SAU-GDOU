@@ -66,4 +66,4 @@ var x = function () {
 			});
 	});
 };
-window.onload = setTimeout(x, 200);
+window.onload = x;
