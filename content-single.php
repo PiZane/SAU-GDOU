@@ -38,3 +38,6 @@
 		</div> <!-- .entry-container -->
 	</div> <!-- .card -->
 </article><!-- #post-## -->
+<script type="text/javascript">
+	var weixinImgUrl = "<?php echo get_template_directory_uri(); ?>";
+</script>

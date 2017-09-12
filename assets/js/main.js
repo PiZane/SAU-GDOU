@@ -8,7 +8,7 @@ function slContent() {
 	var backgrounds = iframe.find('[style*="http://mmbiz.qpic.cn"]');
 	backgrounds.each(function(){
 		var url = $(this).css('background-image').slice(4, -1).replace(/"/g, "");
-		url = "<?php get_template_directory_uri() ?>/weixin.php&url=" + url;
+		url = weixinImgUrl + "/weixin.php&url=" + url;
 		$(this).css('background-image', 'url("'+url+'")')
 	});
 }
