@@ -8,8 +8,10 @@ function slContent() {
 	var backgrounds = iframe.find('[style*="http://mmbiz.qpic.cn"]');
 	backgrounds.each(function(){
 		var url = $(this).css('background-image').slice(4, -1).replace(/"/g, "");
-		url = weixinImgUrl + "/weixin.php&url=" + url;
-		$(this).css('background-image', 'url("'+url+'")')
+		if (url) {
+			var src = $(this).find('img').attr(src);
+			$(this).css('background-image', 'url("'+url+'")')
+		}
 	});
 }
 function footerPosition(){
