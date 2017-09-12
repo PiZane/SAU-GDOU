@@ -9,8 +9,12 @@ function slContent() {
 	backgrounds.each(function(){
 		var url = $(this).css('background-image').slice(4, -1).replace(/"/g, "");
 		if (url) {
-			var src = $(this).find('img').attr(src);
-			$(this).css('background-image', 'url("'+url+'")')
+			var imgs = $(this).find('img[style*="opacity:0"]');
+			var parent = $(this);
+			imgs.each(function(){
+						var src = $(this).attr("src");
+						$(parent).css('background-image', 'url("'+src+'")');
+			})
 		}
 	});
 }
