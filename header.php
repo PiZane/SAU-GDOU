@@ -9,6 +9,7 @@
 ?>
 <?php if(is_single() && isset($_GET['iframe'])) : ?>
 	<style>
+		html{overflow: hidden;}
 		*{padding: 0;margin: 0}
 		img{max-width: 100%!important}
 		video{max-width: 100%!important}

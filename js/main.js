@@ -1,5 +1,9 @@
 window.onload = function() {
 	$.material.init();
+	var postHeight = $(".entry-content>iframe").contents().find('.post-iframe').height();
+	if (postHeight) {
+		$(".entry-content").postHeight();
+	}
 	$('.slider').unslider({
 		autoplay: true
 	});
