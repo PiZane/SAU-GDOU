@@ -11,9 +11,10 @@ function slContent() {
 		if (url) {
 			var imgs = $(this).find('img[style*="opacity:0"]');
 			var parent = $(this);
+			$(parent).css('background-image', 'none');
 			imgs.each(function(){
-						var src = $(this).attr("src");
-						$(parent).css('background-image', 'url("'+src+'")');
+					var src = $(this).attr("src");
+					$(parent).css('background-image', 'url("'+src+'")');
 			})
 		}
 	});
