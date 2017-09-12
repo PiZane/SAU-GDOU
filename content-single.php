@@ -23,7 +23,7 @@
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
-				<iframe src="<?php the_permalink() ?>&iframe=1" width="100%" height="100%" style="border:none;" onload="content()"></iframe>
+				<iframe src="<?php the_permalink() ?>&iframe=1" width="100%" height="100%" style="border:none;" onload="slContent()"></iframe>
 				<?php
 					wp_link_pages( array(
 						'before' => '<div class="page-links">' . __( 'Pages:', 'materialwp' ),
