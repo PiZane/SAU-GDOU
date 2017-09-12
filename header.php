@@ -17,6 +17,11 @@
 	<div class="post-iframe">
 		<?php echo $post->post_content; ?>
 	</div>
+	<script type="text/javascript">
+		window.onload = function() {
+			parent.slContent();
+		}
+	</script>
 <?php exit();?>
 <?php endif ?>
 
