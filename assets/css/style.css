@@ -929,7 +929,6 @@ Media Queries
 		position: relative;
 	}
 	#secondary {
-		width: 33.33333333%!important;
 		right: 0;
   }
 }
@@ -941,7 +940,6 @@ Media Queries
 }
 
 .secondaryTop {
-	width: 33.33333333%!important;
 	padding-top: 1rem;
 }
 
