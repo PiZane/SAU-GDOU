@@ -8,8 +8,13 @@
  */
 ?>
 <?php if(is_single() && isset($_GET['iframe'])) : ?>
+	<style>
+		*{padding: 0;margin: 0}
+		img{max-width: 100%!important}
+		video{max-width: 100%!important}
+	</style>
 	<div class="post-iframe">
-		<?php var_dump($post); ?>
+		<?php echo $post->post_content; ?>
 	</div>
 <?php exit();?>
 <?php endif ?>
