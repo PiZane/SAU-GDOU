@@ -1,16 +1,20 @@
-window.onload = function() {
+$(document).ready(function() {
 	$.material.init();
-	var iframe = $(".entry-content>iframe").contents();
-	var backgrounds = iframe.find('[style*="http://mmbiz.qpic.cn"]');
-	backgrounds.each(function(){
-		var url = $(this).css('background-image').slice(12, -1).replace(/"/g, "");;
-		url = 'http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=' + url;
-		$(this).css('background-image', 'url("'+url+'")')
-	});
-	var postHeight = iframe.find('.post-iframe').height();
-	if (postHeight) {
-		$(".entry-content").height(postHeight);
+	function content() {
+		var iframe = $(".entry-content>iframe").contents();
+		var postHeight = iframe.find('.post-iframe').height();
+		if (postHeight) {
+			$(".entry-content").height(postHeight);
+			$(".entry-content>iframe").height(postHeight);
+		}
+		var backgrounds = iframe.find('[style*="http://mmbiz.qpic.cn"]');
+		backgrounds.each(function(){
+			var url = $(this).css('background-image').slice(12, -1).replace(/"/g, "");;
+			url = 'http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=' + url;
+			$(this).css('background-image', 'url("'+url+'")')
+		});
 	}
+	content();
 	$('.slider').unslider({
 		autoplay: true
 	});
@@ -54,4 +58,4 @@ window.onload = function() {
 				}
 			});
 	});
-};
+};);
