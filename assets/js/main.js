@@ -12,6 +12,22 @@ function slContent() {
 		$(this).css('background-image', 'url("'+url+'")')
 	});
 }
+function footerPosition(){
+		$("#colophon").removeClass("fixed-bottom");
+		var contentHeight = document.body.scrollHeight;
+		var winHeight = window.innerHeight;
+		if(!(contentHeight > winHeight)){
+				$("#colophon").addClass("fixed-bottom");
+		}
+}
+function aside(){
+	var contentWidth = document.body.scrollWidth;
+	if (contentWidth < 992) {
+		$('#secondary').simpleScrollFollow('setEnabled', false);
+	} else {
+		$('#secondary').simpleScrollFollow('setEnabled', true);
+	}
+}
 $(document).ready(function() {
 	$.material.init();
 	slContent();
@@ -29,22 +45,6 @@ $(document).ready(function() {
 	$('#before-tab').click();
 	$('#video-tab').click();
 	$(function(){
-	    function footerPosition(){
-	        $("#colophon").removeClass("fixed-bottom");
-	        var contentHeight = document.body.scrollHeight;
-	        var winHeight = window.innerHeight;
-	        if(!(contentHeight > winHeight)){
-	            $("#colophon").addClass("fixed-bottom");
-	        }
-	    }
-			function aside(){
-				var contentWidth = document.body.scrollWidth;
-				if (contentWidth < 992) {
-					$('#secondary').simpleScrollFollow('setEnabled', false);
-				} else {
-					$('#secondary').simpleScrollFollow('setEnabled', true);
-				}
-			}
 	    footerPosition();
 			aside();
 	    $(window).resize(footerPosition);

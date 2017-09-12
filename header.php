@@ -9,10 +9,9 @@
 ?>
 <?php if(is_single() && isset($_GET['iframe'])) : ?>
 	<style>
-		html{overflow: hidden;}
+		html{overflow: hidden;max-width: 100%;}
 		*{padding: 0;margin: 0}
 		img{max-width: 100%!important}
-		video{max-width: 100%!important}
 	</style>
 	<div class="post-iframe">
 		<?php echo $post->post_content; ?>
@@ -20,6 +19,7 @@
 	<script type="text/javascript">
 		window.onload = function() {
 			parent.slContent();
+			parent.footerPosition();
 		}
 	</script>
 <?php exit();?>
