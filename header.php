@@ -9,7 +9,7 @@
 ?>
 <?php if(is_single() && isset($_GET['iframe'])) : ?>
 	<style>
-		html{height: 100%;overflow: auto;max-width: 100%;}
+		html{height: 100%;overflow: hidden;max-width: 100%;}
 		*{padding: 0;margin: 0}
 		img{max-width: 100%!important}
 	</style>

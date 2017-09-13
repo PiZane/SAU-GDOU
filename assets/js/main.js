@@ -4,6 +4,8 @@ function slContent() {
 	if (postHeight) {
 		$(".entry-content").height(postHeight);
 		$(".entry-content>iframe").height(postHeight);
+		iframe.height(postHeight);
+		iframe.find('html').height(postHeight);
 	}
 	var backgrounds = iframe.find('[style*="http://mmbiz.qpic.cn"]');
 	backgrounds.each(function(){
