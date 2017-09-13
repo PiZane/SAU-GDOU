@@ -83,7 +83,7 @@ $video  =  get_page_by_path( 'video' );
 												<div class="col-md-8 col-sm-12">
 													<h4 class="sl-list-item"><a href="<?php the_permalink(); ?>"><?php echo $post->post_title; ?></a></h4>
 													<p class="excerpt visible-lg visible-md"><?php echo get_post_excerpt($post) ?></p>
-													<p class="text-right visible-lg visible-md"><?php the_time('Y年n月j日 G:i');; ?></p>
+													<p class="text-right visible-lg visible-md"><?php the_time('Y年n月j日');; ?></p>
 												</div>
 											</div>
 										<?php endwhile; ?>

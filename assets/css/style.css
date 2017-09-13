@@ -865,9 +865,6 @@ Media Queries
 	.sl-list-item {
 		font-size: 14px;
 	}
-	.widget_search {
-		display: none;
-	}
 	.wp-video-shortcode {
 		width: 100%;
 	}
