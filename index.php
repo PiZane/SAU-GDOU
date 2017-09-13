@@ -49,7 +49,7 @@ $video  =  get_page_by_path( 'video' );
 						</div>
 						<ul class="nav nav-tabs slTab" id="firstTab" role="tablist">
 							<li class="nav-item">
-								<a class="nav-link active" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video" aria-expanded="true"><?php echo $video->name; ?></a>
+								<a class="nav-link active" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video" aria-expanded="true"><?php echo $video->title; ?></a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about"><?php echo $about->name; ?></a>
