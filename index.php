@@ -16,6 +16,7 @@ $about  =  get_category_by_slug('about');
 $video  =  get_category_by_slug('videos');
 $before =  get_category_by_slug('before');
 $after  =  get_category_by_slug('after');
+$video  =  get_page_by_path( 'video' );
 ?>
 
 <div class="container">
@@ -56,15 +57,16 @@ $after  =  get_category_by_slug('after');
 						</ul>
 						<div class="tab-content" id="firstTabContent">
 							<div class="tab-pane fade active" id="video" role="tabpanel" aria-labelledby="video">
-								<?php query_posts(array('cat'=> $video->cat_ID, 'posts_per_page'=>1)); ?>
-								<?php if ( have_posts() ) : ?>
-									<div class="list-group" style="padding:0;margin:0;background-color:rgba(250,250,250,1)">
-										<?php while ( have_posts() ) : the_post(); ?>
-											<video class="wp-video-shortcode" src="<?php echo get_post_meta($post->ID, "video", true);?>" preload="metadata" controls></video>
-										<?php endwhile; ?>
+								<?php if ( get_post_meta($video->ID, "video", true) ) : ?>
+									<div style="padding:0;margin:0;">
+											<video class="wp-video-shortcode" src="<?php echo get_post_meta($video->ID, "video", true);?>" preload="metadata" controls></video>
 									</div>
 								<?php else : ?>
-									<?php get_template_part( 'content', 'none' ); ?>
+									<?php if ( get_post_meta($video->ID, "html", true) ) : ?>
+										<?php echo get_post_meta($video->ID, "html", true); ?>
+									<?php else : ?>
+										<?php get_template_part( 'content', 'none' ); ?>
+									<?php endif; ?>
 								<?php endif; ?>
 							</div>
 							<div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="video">
