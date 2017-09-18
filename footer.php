@@ -20,7 +20,11 @@
 							&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
 							<a target="_blank" href="http://weibo.com/gdousl20100605">官方微博</a>
 							&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-							<a target="_blank" href="<?php echo get_page_link(get_page_by_path('contact-us')->ID); ?>">联系我们</a></p>
+							<a target="_blank" href="<?php echo get_page_link(get_page_by_path('contact-us')->ID); ?>">联系我们</a>
+						</p>
+						<p class="text-center">
+							Copyright &copy; Student Association Union of GDOU 2017 - <?php echo date('Y'); ?>.
+						</p>
 						<!-- <span>电话: 010-00000000</span><br/>
 						<span>邮编: 524000</span><br/>
 						<span>地址: 广东省湛江市麻章区广东海洋大学体育楼</span> -->
