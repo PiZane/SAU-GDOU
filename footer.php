@@ -23,11 +23,8 @@
 							<a target="_blank" href="<?php echo get_page_link(get_page_by_path('contact-us')->ID); ?>">联系我们</a>
 						</p>
 						<p class="text-center">
-							Copyright &copy; Student Association Union of GDOU 2017 - <?php echo date('Y'); ?>.
+							Copyright &copy; Student Association Union of GDOU <?php echo date('Y'); ?>
 						</p>
-						<!-- <span>电话: 010-00000000</span><br/>
-						<span>邮编: 524000</span><br/>
-						<span>地址: 广东省湛江市麻章区广东海洋大学体育楼</span> -->
 					</div><!-- .site-info -->
 				</div> <!-- col-lg-12 -->
 			</div><!-- .row -->
